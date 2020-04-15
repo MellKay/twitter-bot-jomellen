@@ -99,9 +99,9 @@ function hello() {
 }
 
 retweet();
-setInterval(retweet, 60000);
+setInterval(retweet, 600000);
 
 retweetSOC();
 setInterval(retweetSOC, 1800000);
 
-hello();
+// hello();
