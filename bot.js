@@ -83,8 +83,20 @@ function retweetSOC() {
   );
 }
 
+function hello() {
+  Twitter.post("statuses/update", { status: "hello world!" }, function (
+    err,
+    data,
+    response
+  ) {
+    console.log(data);
+  });
+}
+
 retweet();
 setInterval(retweet, 60000);
 
 retweetSOC();
 setInterval(retweetSOC, 1800000);
+
+hello();
