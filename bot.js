@@ -84,7 +84,7 @@ function retweetSOC() {
 }
 
 retweet();
-setInterval(retweet, 600000);
+setInterval(retweet, 6000);
 
 retweetSOC();
 setInterval(retweetSOC, 1800000);
