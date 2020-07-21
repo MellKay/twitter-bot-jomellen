@@ -1,4 +1,5 @@
-const twit = require("twit");
+const Twit = require("twit");
+
 const config = {
   consumer_key: process.env.consumer_key,
   consumer_secret: process.env.consumer_secret,
@@ -6,7 +7,7 @@ const config = {
   access_token_secret: process.env.access_token_secret,
 };
 
-const Twitter = new twit(config);
+const Twitter = new Twit(config);
 
 function retweet() {
   Twitter.get(
@@ -88,7 +89,7 @@ function retweetSOC() {
   );
 }
 
-function avatar() {
+function avatarRetweet() {
   Twitter.get(
     "search/tweets",
     {
@@ -144,7 +145,7 @@ setInterval(retweet, 60000);
 retweetSOC();
 setInterval(retweetSOC, 60000);
 
-avatar();
-setInterval(avatar, 60000);
+avatarRetweet();
+setInterval(avatarRetweet, 60000);
 
 // hello();
