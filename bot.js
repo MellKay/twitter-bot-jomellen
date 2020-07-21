@@ -88,11 +88,11 @@ function retweetSOC() {
   );
 }
 
-function demoDay() {
+function avatar() {
   Twitter.get(
     "search/tweets",
     {
-      q: "#SOCDemoDay", // REQUIRED
+      q: "#SoCAvatar", // REQUIRED
       result_type: "recent",
       lang: "en",
     },
@@ -109,7 +109,7 @@ function demoDay() {
           },
           function (err, response) {
             if (response) {
-              console.log("Retweeted #SOCDemoDay!");
+              console.log("Retweeted #SoCAvatar!");
             }
             // if there was an error while tweeting
             if (err) {
@@ -139,12 +139,12 @@ function hello() {
 }
 
 retweet();
-setInterval(retweet, 600000);
+setInterval(retweet, 60000);
 
 retweetSOC();
 setInterval(retweetSOC, 60000);
 
-demoDay();
-setInterval(demoDay, 60000);
+avatar();
+setInterval(avatar, 60000);
 
 // hello();
