@@ -98,8 +98,9 @@ function avatarRetweet() {
       lang: "en",
     },
     function (err, data) {
+      console.log(data);
       // if there no errors
-      if (!err && data.statuses[0]) {
+      if (!err && data.statuses[0].id_str) {
         // grab ID of tweet to retweet
         let retweetId = data.statuses[0].id_str;
         // Tell TWITTER to retweet
