@@ -59,7 +59,7 @@ function retweetSOC() {
     },
     function (err, data) {
       // if there no errors
-      if (!err) {
+      if (!err && data.statuses[0]) {
         // grab ID of tweet to retweet
         let retweetId = data.statuses[0].id_str;
         // Tell TWITTER to retweet
@@ -99,7 +99,7 @@ function avatarRetweet() {
     },
     function (err, data) {
       // if there no errors
-      if (!err) {
+      if (!err && data.statuses[0]) {
         // grab ID of tweet to retweet
         let retweetId = data.statuses[0].id_str;
         // Tell TWITTER to retweet
