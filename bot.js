@@ -53,7 +53,7 @@ function retweetSOC() {
   Twitter.get(
     "search/tweets",
     {
-      q: "from:@theschoolofcode", // REQUIRED
+      q: "from:@theSchoolOfCode", // REQUIRED
       result_type: "recent",
       lang: "en",
     },
@@ -89,11 +89,11 @@ function retweetSOC() {
   );
 }
 
-function avatarRetweet() {
+function variationRetweet() {
   Twitter.get(
     "search/tweets",
     {
-      q: "#SoCAvatar", // REQUIRED
+      q: "#SOC", // REQUIRED
       result_type: "recent",
       lang: "en",
     },
@@ -111,7 +111,7 @@ function avatarRetweet() {
           },
           function (err, response) {
             if (response) {
-              console.log("Retweeted #SoCAvatar!");
+              console.log("Retweeted #SOC!");
             }
             // if there was an error while tweeting
             if (err) {
@@ -146,7 +146,7 @@ setInterval(retweet, 60000);
 retweetSOC();
 setInterval(retweetSOC, 60000);
 
-avatarRetweet();
-setInterval(avatarRetweet, 60000);
+variationRetweet();
+setInterval(variationRetweet, 60000);
 
 // hello();
