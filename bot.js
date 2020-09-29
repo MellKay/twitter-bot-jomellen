@@ -93,7 +93,7 @@ function variationRetweet() {
   Twitter.get(
     "search/tweets",
     {
-      q: "#SOC", // REQUIRED
+      q: "#SOCBootcamp", // REQUIRED
       result_type: "recent",
       lang: "en",
     },
@@ -111,7 +111,7 @@ function variationRetweet() {
           },
           function (err, response) {
             if (response) {
-              console.log("Retweeted #SOC!");
+              console.log("Retweeted #SOCBootcamp!");
             }
             // if there was an error while tweeting
             if (err) {
