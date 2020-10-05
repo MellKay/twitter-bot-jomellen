@@ -43,7 +43,9 @@ function retweet() {
       }
       // if unable to Search a tweet
       else {
-        console.log("Something went wrong while SEARCHING...");
+        console.log(
+          "Something went wrong while SEARCHING for #schoolofcode..."
+        );
       }
     }
   );
@@ -83,7 +85,9 @@ function retweetSOC() {
       }
       // if unable to Search a tweet
       else {
-        console.log("Something went wrong while SEARCHING...");
+        console.log(
+          "Something went wrong while SEARCHING for @theSchoolOfCode..."
+        );
       }
     }
   );
@@ -124,7 +128,7 @@ function variationRetweet() {
       }
       // if unable to Search a tweet
       else {
-        console.log("Something went wrong while SEARCHING...");
+        console.log("Something went wrong while SEARCHING #SOCBootcamp...");
       }
     }
   );
