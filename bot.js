@@ -134,6 +134,47 @@ function variationRetweet() {
   );
 }
 
+function demoDayRetweet() {
+  Twitter.get(
+    "search/tweets",
+    {
+      q: "#SOCDemoDay", // REQUIRED
+      result_type: "recent",
+      lang: "en",
+    },
+    function (err, data) {
+      // console.log(data);
+      // if there no errors
+      if (!err && data.statuses[0].id_str) {
+        // grab ID of tweet to retweet
+        let retweetId = data.statuses[0].id_str;
+        // Tell TWITTER to retweet
+        Twitter.post(
+          "statuses/retweet/:id",
+          {
+            id: retweetId,
+          },
+          function (err, response) {
+            if (response) {
+              console.log("Retweeted #SOCDemoDay!");
+            }
+            // if there was an error while tweeting
+            if (err) {
+              console.log(
+                "Something went wrong while RETWEETING... Duplication maybe..."
+              );
+            }
+          }
+        );
+      }
+      // if unable to Search a tweet
+      else {
+        console.log("Something went wrong while SEARCHING #SOCDemoDay...");
+      }
+    }
+  );
+}
+
 // function hello() {
 //   Twitter.post("statuses/update", { status: "hello world!" }, function (
 //     err,
@@ -148,9 +189,12 @@ retweet();
 setInterval(retweet, 1800000);
 
 retweetSOC();
-setInterval(retweetSOC, 1800000);
+setInterval(retweetSOC, 60000);
 
 variationRetweet();
 setInterval(variationRetweet, 1800000);
+
+demoDayRetweet();
+setInterval(demoDayRetweet, 60000);
 
 // hello();
