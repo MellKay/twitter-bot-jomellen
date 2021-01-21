@@ -189,12 +189,12 @@ retweet();
 setInterval(retweet, 1800000);
 
 retweetSOC();
-setInterval(retweetSOC, 60000);
+setInterval(retweetSOC, 1800000);
 
 variationRetweet();
 setInterval(variationRetweet, 1800000);
 
-demoDayRetweet();
-setInterval(demoDayRetweet, 60000);
+// demoDayRetweet();
+// setInterval(demoDayRetweet, 60000);
 
 // hello();
