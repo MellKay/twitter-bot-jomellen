@@ -186,13 +186,13 @@ function demoDayRetweet() {
 // }
 
 retweet();
-setInterval(retweet, 1800000);
+setInterval(retweet, 3600000);
 
 retweetSOC();
-setInterval(retweetSOC, 1800000);
+setInterval(retweetSOC, 3600000);
 
 variationRetweet();
-setInterval(variationRetweet, 1800000);
+setInterval(variationRetweet, 3600000);
 
 // demoDayRetweet();
 // setInterval(demoDayRetweet, 60000);
